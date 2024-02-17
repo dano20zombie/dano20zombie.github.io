@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>技术 on dano20zombie的博客</title>
+    <link>https://dano20zombie.github.io/zh/categories/%E6%8A%80%E6%9C%AF/</link>
+    <description>Recent content in 技术 on dano20zombie的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 17 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://dano20zombie.github.io/zh/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CppOnionBridge：互联网匿名访问的创新</title>
+      <link>https://dano20zombie.github.io/zh/posts/cpponionbridge/</link>
+      <pubDate>Sat, 17 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://dano20zombie.github.io/zh/posts/cpponionbridge/</guid>
+      <description>免责声明 本文和CppOnionBridge项目旨在促进互联网隐私和安全。始终应在当地法律和规定的框架内使用匿名浏览工具。请记住，使用这些工具的责任在于最终用户。本内容“按原样”提供，不对其准确性或时效性作任何保证。
+引言 在当前互联网隐私不断受到威胁的情况下，CppOnionBridge作为确保安全和匿名访问互联网的领先解决方案而出现。该项目专为Windows环境开发，允许通过Tor网络安全浏览onion站点和API，使用SOCKS5协议。
+愿景 CppOnionBridge背后的愿景很明确：提供一个工具，不仅保护用户在互联网上的身份，而且使Tor网络的强大功能以最小的技术努力对开发者和最终用户可用。
+特点和优势 易于集成：CppOnionBridge设计用于轻松集成到C++应用程序中，降低了开发安全应用程序的门槛。 最小依赖：仅依赖于Boost进行网络和系统操作，以及OpenSSL进行加密通信，保持轻量级并对开发环境保持中立。 与SOCKS5兼容：确保与Tor网络的流畅且安全的交互，为需要安全性和隐私的广泛应用程序打开了大门。 安装指南 安装CppOnionBridge需要一些预备步骤，包括在您的开发环境中设置Boost和OpenSSL，以及配置一个活动的Tor服务实例通过9150端口运行。
+安装步骤： 确保您的系统中已安装并正确配置了Boost和OpenSSL。 检查Tor服务是否活动，并且已配置为通过9150端口连接。 克隆GitHub上的CppOnionBridge仓库并将其包含在您的项目中。 实现 对于具有基本C++知识的任何人来说，使用CppOnionBridge都是直观的。下面提供了一个GET请求的实现示例，不包括具体的C++代码。
+// Example code for a GET request using CppOnionBridge static std::string const host = &amp;#34;bible4u2lvhacg4b3to2e2veqpwmrc2c3tjf2wuuqiz332vlwmr4xbad.onion&amp;#34;; // Bible4u static std::string const api1 = &amp;#34;/en/about&amp;#34;; // About Page static std::string const api2 = &amp;#34;/en/links&amp;#34;; // Links Page int main() { std::string response; std::cout &amp;lt;&amp;lt; &amp;#34;Connecting to &amp;#34; &amp;lt;&amp;lt; host + api1 &amp;lt;&amp;lt; &amp;#34;...&amp;#34; &amp;lt;&amp;lt; std::endl; connection.</description>
+      <content>&lt;h2 id=&#34;免责声明&#34;&gt;免责声明&lt;/h2&gt;
+&lt;p&gt;本文和CppOnionBridge项目旨在促进互联网隐私和安全。始终应在当地法律和规定的框架内使用匿名浏览工具。请记住，使用这些工具的责任在于最终用户。本内容“按原样”提供，不对其准确性或时效性作任何保证。&lt;/p&gt;
+&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;
+&lt;p&gt;在当前互联网隐私不断受到威胁的情况下，&lt;strong&gt;CppOnionBridge&lt;/strong&gt;作为确保安全和匿名访问互联网的领先解决方案而出现。该项目专为Windows环境开发，允许通过Tor网络安全浏览onion站点和API，使用SOCKS5协议。&lt;/p&gt;
+&lt;h2 id=&#34;愿景&#34;&gt;愿景&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;CppOnionBridge&lt;/strong&gt;背后的愿景很明确：提供一个工具，不仅保护用户在互联网上的身份，而且使Tor网络的强大功能以最小的技术努力对开发者和最终用户可用。&lt;/p&gt;
+&lt;h2 id=&#34;特点和优势&#34;&gt;特点和优势&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;易于集成&lt;/strong&gt;：&lt;strong&gt;CppOnionBridge&lt;/strong&gt;设计用于轻松集成到C++应用程序中，降低了开发安全应用程序的门槛。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;最小依赖&lt;/strong&gt;：仅依赖于Boost进行网络和系统操作，以及OpenSSL进行加密通信，保持轻量级并对开发环境保持中立。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;与SOCKS5兼容&lt;/strong&gt;：确保与Tor网络的流畅且安全的交互，为需要安全性和隐私的广泛应用程序打开了大门。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;安装指南&#34;&gt;安装指南&lt;/h2&gt;
+&lt;p&gt;安装&lt;strong&gt;CppOnionBridge&lt;/strong&gt;需要一些预备步骤，包括在您的开发环境中设置Boost和OpenSSL，以及配置一个活动的Tor服务实例通过9150端口运行。&lt;/p&gt;
+&lt;h3 id=&#34;安装步骤&#34;&gt;安装步骤：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;确保您的系统中已安装并正确配置了Boost和OpenSSL。&lt;/li&gt;
+&lt;li&gt;检查Tor服务是否活动，并且已配置为通过9150端口连接。&lt;/li&gt;
+&lt;li&gt;克隆GitHub上的&lt;strong&gt;CppOnionBridge&lt;/strong&gt;仓库并将其包含在您的项目中。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;实现&#34;&gt;实现&lt;/h2&gt;
+&lt;p&gt;对于具有基本C++知识的任何人来说，使用&lt;strong&gt;CppOnionBridge&lt;/strong&gt;都是直观的。下面提供了一个GET请求的实现示例，不包括具体的C++代码。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Example code for a GET request using CppOnionBridge
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;string &lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; host &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bible4u2lvhacg4b3to2e2veqpwmrc2c3tjf2wuuqiz332vlwmr4xbad.onion&amp;#34;&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;// Bible4u
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;string &lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; api1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/en/about&amp;#34;&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;// About Page
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;string &lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; api2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/en/links&amp;#34;&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;// Links Page
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;string response;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;cout &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Connecting to &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; host &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; api1 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;...&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    connection.make_get(host, api1, std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;string(), response);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;cout &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; response &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;cout &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Connecting to &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; host &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; api2 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;...&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    connection.make_get(host, api2, std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;string(), response);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;cout &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; response &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    system(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;pause&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;项目贡献&#34;&gt;项目贡献&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;CppOnionBridge&lt;/strong&gt;是一个开源项目，社区的参与对于其持续发展和改进至关重要。如果您对贡献感兴趣，无论是编程、文档还是测试，请访问&lt;a href=&#34;https://github.com/dano20zombie/CppOnionBridge&#34;&gt;GitHub仓库&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;结论&#34;&gt;结论&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;CppOnionBridge&lt;/strong&gt;代表了向安全和匿名互联网访问民主化迈出的重要一步。得益于其易于集成、最小依赖和与Tor网络的兼容性，它为开发尊重用户隐私和安全的应用程序开辟了新的视野。&lt;/p&gt;
+&lt;p&gt;有关更多详细信息、参考资料和安装指南，请访问GitHub仓库中的&lt;a href=&#34;https://github.com/dano20zombie/CppOnionBridge&#34;&gt;完整文档&lt;/a&gt;。&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

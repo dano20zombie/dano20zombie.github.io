@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  
+    <title>CppOnionBridge：互联网匿名访问的创新 :: dano20zombie的博客</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="探索CppOnionBridge，这是互联网匿名浏览的终极解决方案。本文深入探讨了该项目如何通过Tor网络提供对onion站点和API的安全受保护访问，强调了数字时代互联网隐私和安全的重要性。非常适合希望改善在线体验同时保护其数字身份的Windows用户。" />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://dano20zombie.github.io/zh/posts/cpponionbridge/" />
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://dano20zombie.github.io/styles.css">
+
+
+
+
+
+
+
+  <link rel="shortcut icon" href="https://dano20zombie.github.io/favicon.ico">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="zh" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="CppOnionBridge：互联网匿名访问的创新">
+<meta property="og:description" content="探索CppOnionBridge，这是互联网匿名浏览的终极解决方案。本文深入探讨了该项目如何通过Tor网络提供对onion站点和API的安全受保护访问，强调了数字时代互联网隐私和安全的重要性。非常适合希望改善在线体验同时保护其数字身份的Windows用户。" />
+<meta property="og:url" content="https://dano20zombie.github.io/zh/posts/cpponionbridge/" />
+<meta property="og:site_name" content="dano20zombie的博客" />
+
+  
+    <meta property="og:image" content="https://dano20zombie.github.io/favicon.ico">
+  
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+  <meta property="article:section" content="安全" />
+
+  <meta property="article:section" content="技术" />
+
+
+  <meta property="article:published_time" content="2024-02-17 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="red">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/zh">
+  <div class="logo">
+    dano20zombie的博客
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/zh/about">关于我</a></li>
+        
+      
+        
+          <li><a href="/zh/showcase">展示</a></li>
+        
+      
+      
+        <hr />
+        
+          <li>
+            <a href="https://dano20zombie.github.io/en/">English</a>
+          </li>
+        
+          <li>
+            <a href="https://dano20zombie.github.io/zh/">中文</a>
+          </li>
+        
+          <li>
+            <a href="https://dano20zombie.github.io/es/">Español</a>
+          </li>
+        
+          <li>
+            <a href="https://dano20zombie.github.io/fr/">Français</a>
+          </li>
+        
+          <li>
+            <a href="https://dano20zombie.github.io/it/">Italiano</a>
+          </li>
+        
+          <li>
+            <a href="https://dano20zombie.github.io/ar/">العربية</a>
+          </li>
+        
+          <li>
+            <a href="https://dano20zombie.github.io/de/">Deutsch</a>
+          </li>
+        
+          <li>
+            <a href="https://dano20zombie.github.io/ru/">Русский</a>
+          </li>
+        
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+      <ul class="menu menu--desktop menu--language-selector">
+  <li class="menu__trigger">中文&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        <li><a href="https://dano20zombie.github.io/en/">English</a></li>
+      
+        <li><a href="https://dano20zombie.github.io/zh/">中文</a></li>
+      
+        <li><a href="https://dano20zombie.github.io/es/">Español</a></li>
+      
+        <li><a href="https://dano20zombie.github.io/fr/">Français</a></li>
+      
+        <li><a href="https://dano20zombie.github.io/it/">Italiano</a></li>
+      
+        <li><a href="https://dano20zombie.github.io/ar/">العربية</a></li>
+      
+        <li><a href="https://dano20zombie.github.io/de/">Deutsch</a></li>
+      
+        <li><a href="https://dano20zombie.github.io/ru/">Русский</a></li>
+      
+    </ul>
+  </li>
+</ul>
+
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/zh/about" >关于我</a></li>
+        
+      
+        
+          <li><a href="/zh/showcase" >展示</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://dano20zombie.github.io/zh/posts/cpponionbridge/">CppOnionBridge：互联网匿名访问的创新</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2024-02-17</time><span class="post-reading-time">1 min read (109 words)</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://dano20zombie.github.io/zh/tags/cpponionbridge/">CppOnionBridge</a>&nbsp;
+      
+      #<a href="https://dano20zombie.github.io/zh/tags/tor%E7%BD%91%E7%BB%9C/">Tor网络</a>&nbsp;
+      
+      #<a href="https://dano20zombie.github.io/zh/tags/%E4%BA%92%E8%81%94%E7%BD%91%E5%8C%BF%E5%90%8D%E8%AE%BF%E9%97%AE/">互联网匿名访问</a>&nbsp;
+      
+      #<a href="https://dano20zombie.github.io/zh/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">网络安全</a>&nbsp;
+      
+      #<a href="https://dano20zombie.github.io/zh/tags/c&#43;&#43;/">C&#43;&#43;</a>&nbsp;
+      
+    </span>
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <h2 id="免责声明">免责声明<a href="#免责声明" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>本文和CppOnionBridge项目旨在促进互联网隐私和安全。始终应在当地法律和规定的框架内使用匿名浏览工具。请记住，使用这些工具的责任在于最终用户。本内容“按原样”提供，不对其准确性或时效性作任何保证。</p>
+<h2 id="引言">引言<a href="#引言" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>在当前互联网隐私不断受到威胁的情况下，<strong>CppOnionBridge</strong>作为确保安全和匿名访问互联网的领先解决方案而出现。该项目专为Windows环境开发，允许通过Tor网络安全浏览onion站点和API，使用SOCKS5协议。</p>
+<h2 id="愿景">愿景<a href="#愿景" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p><strong>CppOnionBridge</strong>背后的愿景很明确：提供一个工具，不仅保护用户在互联网上的身份，而且使Tor网络的强大功能以最小的技术努力对开发者和最终用户可用。</p>
+<h2 id="特点和优势">特点和优势<a href="#特点和优势" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ul>
+<li><strong>易于集成</strong>：<strong>CppOnionBridge</strong>设计用于轻松集成到C++应用程序中，降低了开发安全应用程序的门槛。</li>
+<li><strong>最小依赖</strong>：仅依赖于Boost进行网络和系统操作，以及OpenSSL进行加密通信，保持轻量级并对开发环境保持中立。</li>
+<li><strong>与SOCKS5兼容</strong>：确保与Tor网络的流畅且安全的交互，为需要安全性和隐私的广泛应用程序打开了大门。</li>
+</ul>
+<h2 id="安装指南">安装指南<a href="#安装指南" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>安装<strong>CppOnionBridge</strong>需要一些预备步骤，包括在您的开发环境中设置Boost和OpenSSL，以及配置一个活动的Tor服务实例通过9150端口运行。</p>
+<h3 id="安装步骤">安装步骤：<a href="#安装步骤" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ol>
+<li>确保您的系统中已安装并正确配置了Boost和OpenSSL。</li>
+<li>检查Tor服务是否活动，并且已配置为通过9150端口连接。</li>
+<li>克隆GitHub上的<strong>CppOnionBridge</strong>仓库并将其包含在您的项目中。</li>
+</ol>
+<h2 id="实现">实现<a href="#实现" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>对于具有基本C++知识的任何人来说，使用<strong>CppOnionBridge</strong>都是直观的。下面提供了一个GET请求的实现示例，不包括具体的C++代码。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// Example code for a GET request using CppOnionBridge
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">static</span> std<span style="color:#f92672">::</span>string <span style="color:#66d9ef">const</span> host <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;bible4u2lvhacg4b3to2e2veqpwmrc2c3tjf2wuuqiz332vlwmr4xbad.onion&#34;</span>; <span style="color:#75715e">// Bible4u
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">static</span> std<span style="color:#f92672">::</span>string <span style="color:#66d9ef">const</span> api1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/en/about&#34;</span>; <span style="color:#75715e">// About Page
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">static</span> std<span style="color:#f92672">::</span>string <span style="color:#66d9ef">const</span> api2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/en/links&#34;</span>; <span style="color:#75715e">// Links Page
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>string response;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Connecting to &#34;</span> <span style="color:#f92672">&lt;&lt;</span> host <span style="color:#f92672">+</span> api1 <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;...&#34;</span> <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+</span></span><span style="display:flex;"><span>    connection.make_get(host, api1, std<span style="color:#f92672">::</span>string(), response);
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> response <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Connecting to &#34;</span> <span style="color:#f92672">&lt;&lt;</span> host <span style="color:#f92672">+</span> api2 <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;...&#34;</span> <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+</span></span><span style="display:flex;"><span>    connection.make_get(host, api2, std<span style="color:#f92672">::</span>string(), response);
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> response <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+</span></span><span style="display:flex;"><span>    system(<span style="color:#e6db74">&#34;pause&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="项目贡献">项目贡献<a href="#项目贡献" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p><strong>CppOnionBridge</strong>是一个开源项目，社区的参与对于其持续发展和改进至关重要。如果您对贡献感兴趣，无论是编程、文档还是测试，请访问<a href="https://github.com/dano20zombie/CppOnionBridge">GitHub仓库</a>。</p>
+<h2 id="结论">结论<a href="#结论" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p><strong>CppOnionBridge</strong>代表了向安全和匿名互联网访问民主化迈出的重要一步。得益于其易于集成、最小依赖和与Tor网络的兼容性，它为开发尊重用户隐私和安全的应用程序开辟了新的视野。</p>
+<p>有关更多详细信息、参考资料和安装指南，请访问GitHub仓库中的<a href="https://github.com/dano20zombie/CppOnionBridge">完整文档</a>。</p>
+
+      </div></div>
+
+  
+    
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2024 Powered by <a href="https://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

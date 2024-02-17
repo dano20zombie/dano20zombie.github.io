@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Le blog de dano20zombie</title>
+    <link>https://dano20zombie.github.io/fr/categories/</link>
+    <description>Recent content in Categories on Le blog de dano20zombie</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Sat, 17 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://dano20zombie.github.io/fr/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sécurité</title>
+      <link>https://dano20zombie.github.io/fr/categories/s%C3%A9curit%C3%A9/</link>
+      <pubDate>Sat, 17 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://dano20zombie.github.io/fr/categories/s%C3%A9curit%C3%A9/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>Technologie</title>
+      <link>https://dano20zombie.github.io/fr/categories/technologie/</link>
+      <pubDate>Sat, 17 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://dano20zombie.github.io/fr/categories/technologie/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+  </channel>
+</rss>
