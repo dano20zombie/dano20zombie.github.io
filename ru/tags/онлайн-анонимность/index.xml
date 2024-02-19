@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Онлайн-анонимность on Блог dano20zombie</title>
+    <link>https://dano20zombie.github.io/ru/tags/%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD-%D0%B0%D0%BD%D0%BE%D0%BD%D0%B8%D0%BC%D0%BD%D0%BE%D1%81%D1%82%D1%8C/</link>
+    <description>Recent content in Онлайн-анонимность on Блог dano20zombie</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-RU</language>
+    <lastBuildDate>Sat, 17 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://dano20zombie.github.io/ru/tags/%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD-%D0%B0%D0%BD%D0%BE%D0%BD%D0%B8%D0%BC%D0%BD%D0%BE%D1%81%D1%82%D1%8C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CppOnionBridge: Инновация в анонимном доступе к интернету</title>
+      <link>https://dano20zombie.github.io/ru/posts/cpponionbridge/</link>
+      <pubDate>Sat, 17 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://dano20zombie.github.io/ru/posts/cpponionbridge/</guid>
+      <description>Отказ от ответственности Этот пост и проект CppOnionBridge нацелены на продвижение онлайн-конфиденциальности и безопасности. Использование инструментов для анонимного просмотра интернета должно всегда осуществляться в соответствии с местными законами и правилами. Напоминаем вам, что ответственность за использование таких инструментов лежит на конечном пользователе. Этот контент предоставляется &amp;ldquo;как есть&amp;rdquo;, без каких-либо гарантий относительно его точности или актуальности.
+Введение В текущем контексте, где онлайн-конфиденциальность постоянно находится под угрозой, CppOnionBridge представляет себя как передовое решение для обеспечения анонимного и безопасного доступа в Интернет.</description>
+      <content>&lt;h2 id=&#34;отказ-от-ответственности&#34;&gt;Отказ от ответственности&lt;/h2&gt;
+&lt;p&gt;Этот пост и проект CppOnionBridge нацелены на продвижение онлайн-конфиденциальности и безопасности. Использование инструментов для анонимного просмотра интернета должно всегда осуществляться в соответствии с местными законами и правилами. Напоминаем вам, что ответственность за использование таких инструментов лежит на конечном пользователе. Этот контент предоставляется &amp;ldquo;как есть&amp;rdquo;, без каких-либо гарантий относительно его точности или актуальности.&lt;/p&gt;
+&lt;h2 id=&#34;введение&#34;&gt;Введение&lt;/h2&gt;
+&lt;p&gt;В текущем контексте, где онлайн-конфиденциальность постоянно находится под угрозой, &lt;strong&gt;CppOnionBridge&lt;/strong&gt; представляет себя как передовое решение для обеспечения анонимного и безопасного доступа в Интернет. Этот проект, разработанный с упором на среды Windows, позволяет безопасно перемещаться по сайтам и API через сеть Tor, используя протокол SOCKS5.&lt;/p&gt;
+&lt;h2 id=&#34;видение&#34;&gt;Видение&lt;/h2&gt;
+&lt;p&gt;Видение за &lt;strong&gt;CppOnionBridge&lt;/strong&gt; ясно: предоставить инструмент, который не только защищает онлайн-идентичность пользователей, но также делает доступ к силе сети Tor доступным для разработчиков и конечных пользователей с минимальными техническими усилиями. Этот проект инкапсулирует сложность соединений SSL/TLS и запросов HTTP(S) через Tor, позволяя сосредоточиться на функциональности приложения.&lt;/p&gt;
+&lt;h2 id=&#34;особенности-и-преимущества&#34;&gt;Особенности и Преимущества&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Простота Интеграции&lt;/strong&gt;: Разработанный для легкой интеграции в приложения C++, &lt;strong&gt;CppOnionBridge&lt;/strong&gt; снижает барьер для разработки безопасных приложений.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Минимальные Зависимости&lt;/strong&gt;: С зависимостями только от Boost для сетевых и системных операций и от OpenSSL для зашифрованных соединений, он остается легким и агностичным к окружению разработки.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Совместимость с SOCKS5&lt;/strong&gt;: Обеспечивает плавное и безопасное взаимодействие с сетью Tor, открывая путь для широкого спектра приложений, требующих анонимности и безопасности.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;что-такое-socks5&#34;&gt;Что такое SOCKS5&lt;/h2&gt;
+&lt;p&gt;SOCKS - это интернет-протокол, который обменивается сетевыми пакетами между клиентом и сервером через прокси-сервер. SOCKS5 по желанию предоставляет аутентификацию, так что только авторизованные пользователи могут получить доступ к серверу.&lt;/p&gt;
+&lt;h2 id=&#34;почему-socks5&#34;&gt;Почему SOCKS5&lt;/h2&gt;
+&lt;p&gt;Протокол SOCKS5 был выбран из-за его гибкости и безопасности. Его клиент-серверная архитектура позволяет инкапсулировать запросы HTTP(S) и соединения SSL/TLS через Tor, обеспечивая безопасное и анонимное взаимодействие с сетью. Более того, его совместимость с широким спектром приложений делает его идеальным выбором для обеспечения анонимности и онлайн-безопасности. (&lt;a href=&#34;https://en.wikipedia.org/wiki/SOCKS&#34;&gt;Wikipedia&lt;/a&gt;)
+Сервер SOCKS5 действует как прокси между вами и конечным хостом, отправляя пакеты с вашего компьютера на другую сторону соединения и наоборот.
+TOR уже предоставляет нам интерфейс SOCKS5, который базируется на стандартном локальном порту 9050, но в этом примере мы будем использовать порт 9150.&lt;/p&gt;
+&lt;h2 id=&#34;как-это-работает&#34;&gt;Как это работает&lt;/h2&gt;
+&lt;p&gt;CppOnionBridge зависит от двух внешних библиотек: Boost и OpenSSL, поэтому давайте начнем с их включения в наш проект:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;boost/asio.hpp&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;boost/beast.hpp&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;boost/beast/http.hpp&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;boost/beast/ssl.hpp&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;boost/beast/version.hpp&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;boost/asio/connect.hpp&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;boost/asio/ip/tcp.hpp&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;boost/asio/ssl/error.hpp&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;boost/asio/ssl/stream.hpp&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#pragma comment(lib, &amp;#34;libcrypto64MD.lib&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#pragma comment(lib, &amp;#34;libssl64MD.lib&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;Windows.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Definizioni di namespace per semplificare il codice
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;namespace&lt;/span&gt; beast &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; boost&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;beast;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;namespace&lt;/span&gt; http &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; beast&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;http;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;namespace&lt;/span&gt; ssl &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; boost&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;asio&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;ssl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;namespace&lt;/span&gt; asio &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; boost&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;asio;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;namespace&lt;/span&gt; error &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; boost&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;asio&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;error;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;using&lt;/span&gt; tcp &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; asio&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;ip&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;tcp;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;string &lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; host &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bible4u2lvhacg4b3to2e2veqpwmrc2c3tjf2wuuqiz332vlwmr4xbad.onion&amp;#34;&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;// Bible4u
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;string &lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; api &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/en/about&amp;#34;&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;// About Page
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;После этого, как наш первый фактический шаг, нам нужно создать сокет и подключиться к адресу localhost с нашим указанным портом (127.0.0.1:9150):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;asio&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;io_context io_context;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tcp&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;socket socket(io_context);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tcp&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;resolver resolver(io_context);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssl&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;stream&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;tcp&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;socket&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;gt;*&lt;/span&gt; ssl_stream &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;nullptr&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; endpoints &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; resolver.resolve(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;127.0.0.1&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;9150&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;asio&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;connect(socket, endpoints);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;cout &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Connessione stabilita con successo.&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Подключившись к сокету, первое, что нужно сделать, это отправить начальное приветствие серверу, чтобы сообщить, что мы хотим использовать протокол SOCKS5.
+Для подробной информации о SOCKS5, вы можете обратиться к &lt;a href=&#34;https://tools.ietf.org/html/rfc1928&#34;&gt;IETF.ORG&lt;/a&gt;
+Прежде всего, вам нужно знать, что начальное приветствие состоит из трех отдельных байтов последовательно:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;ВЕРСИЯ СОКЕТА&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;КОЛИЧЕСТВО МЕТОДОВ АУТЕНТИФИКАЦИИ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;МЕТОДЫ АУТЕНТИФИКАЦИИ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Для первого байта у нас есть 0x5, что является версией сокета (SOCKS5), второй байт указывает количество методов аутентификации, поддерживаемых клиентом, где в данном случае TOR принимает только один, который равен 0x1, в то время как третий байт указывает выбранный метод аутентификации, который в данном случае будет 0x0, что означает отсутствие аутентификации.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Send the SOCKS5 greeting.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;socket.send(boost&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;asio&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;buffer(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\x05\x01\x00&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;В этот момент нам просто нужно прочитать ответ, возвращаемый прокси, чтобы узнать, все ли прошло хорошо или нет, прочитав второй байт ответа, который всегда должен быть 0x0.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Receive the response to the SOCKS5 greeting.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;char&lt;/span&gt; response[&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;size_t length &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; socket.receive(boost&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;asio&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;buffer(response, &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Check the response to the SOCKS5 greeting.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (length &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; response[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;\x00&amp;#39;&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Если все прошло хорошо, нам остается лишь сообщить прокси-серверу о подключении к определенному хосту для нас, чтобы мы могли отправлять и получать запросы.
+Мы продолжим таким же образом, как и с начальным приветствием, но с другими байтами. В этом случае у нас есть четыре начальных байта, указанный хост и один или два последних байта для указания порта (HTTP/HTTPS - 80/443).&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;ВЕРСИЯ СОКЕТА&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;КОМАНДА&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;ЗАРЕЗЕРВИРОВАНО&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;ТИП АДРЕСА&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;ДЛИНА АДРЕСА (ТОЛЬКО ЕСЛИ ТИП ДОМЕНА)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;АДРЕС&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;ПОРТ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Первым байтом у нас является 0x5, что является версией сокета (SOCK-5), вторым байтом у нас есть команда, которую мы хотим выполнить, где в данном случае это будет 0x1, что означает подключение, третьим байтом у нас есть зарезервированный байт, который всегда должен быть 0x0, и четвертым байтом у нас есть тип адреса, который мы указываем, где в данном случае это будет 0x3, что означает доменный адрес, но также может быть 0x1 для подключения к IPv4 или 0x4 для подключения к IPv6.
+После этих байтов необходимо указать длину домена, к которому мы подключаемся, на пятом байте, и сразу после указать хост через домен, а в последнем одном или двух байтах у нас есть порт для подключения, где наиболее распространены 80 (0x50) для HTTP и 443 (0x01 0xBB) для HTTPS.
+Все доступные команды видны и задокументированы на веб-сайте &lt;a href=&#34;https://tools.ietf.org/html/rfc1928&#34;&gt;IETF.ORG&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;byte&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; request &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; byte[&lt;span style=&#34;color:#ae81ff&#34;&gt;256&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;memset(request, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;sizeof&lt;/span&gt;(request));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sprintf(request, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\x05\x01\x00\x03&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%c%s&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\x01\xBB&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;static_cast&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;char&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;(host.size()), host.c_str());
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Send the request.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;socket.send(boost&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;asio&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;buffer(request, &lt;span style=&#34;color:#ae81ff&#34;&gt;7&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; host.size()));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;delete&lt;/span&gt;[] request;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Наконец, нам просто нужно, как всегда, проверить ответ сервера, который в этом случае должен быть длиной в десять байт, из которых мы будем читать исключительно второй, так как он возвращает статус нашего запроса.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Receive the response to the SOCKS5 connection request.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;char&lt;/span&gt; buffer[&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; length_response &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; socket.receive(boost&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;asio&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;buffer(buffer, &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (length_response &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; buffer[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;\x00&amp;#39;&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 0x1: General failure of the socket
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 0x2: Connection&amp;#39;s rule not allowed
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 0x3: Network not available
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 0x4: Host not available
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 0x5: Connection refused (SOCK5 not available)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 0x6: Timeout
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 0x7: Command not supported
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 0x8: Address type not supported
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Некоторые onion-домены могут не принимать входящие соединения через SOCK5, в этом случае, если вы не являетесь владельцем домена, мало что можно сделать.
+Однако на данный момент мы можем продолжить с отправкой фактического запроса.
+Если делается запрос HTTPS, необходимо отправить зашифрованный запрос через SSL-поток с соответствующим рукопожатием, в противном случае сервер не сможет его интерпретировать.
+С другой стороны, это следует избегать, если делается запрос HTTP, где в этом случае сервер ожидает четкий запрос, поэтому не зашифрованный.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Create the SSL stream for the new connection
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;ssl&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;context ctx(ssl&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;context&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;sslv23);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssl_stream &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; ssl&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;stream&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;tcp&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;socket&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;gt;&lt;/span&gt;(socket, ctx);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Perform the SSL/TLS handshake
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;ssl_stream&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;handshake(ssl&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;stream_base&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;client);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;После выполнения SSL-потока и его рукопожатия (ЕСЛИ НЕОБХОДИМО ДЛЯ HTTPS), мы продолжаем с отправкой фактического запроса:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Prepare the HTTP request
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;string target &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; api;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;http&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;request&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;http&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;string_body&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; req(http&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;verb&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;get, target, &lt;span style=&#34;color:#ae81ff&#34;&gt;11&lt;/span&gt;); &lt;span style=&#34;color:#75715e&#34;&gt;// Si specifica il metodo (GET/POST/PUT), l&amp;#39;host e la versione dell&amp;#39;HTTP
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;req.set(http&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;field&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;host, host); &lt;span style=&#34;color:#75715e&#34;&gt;// Si specifica l&amp;#39;host
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;req.set(http&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;field&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;user_agent, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Mozilla/5.0 (Windows NT 6.1; rv:31.0) Gecko/20100101 Firefox/31.0&amp;#34;&lt;/span&gt;); &lt;span style=&#34;color:#75715e&#34;&gt;// Si specifica l&amp;#39;User-Agent (Browser)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;req.set(http&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;field&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;connection, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;keep-alive&amp;#34;&lt;/span&gt;); &lt;span style=&#34;color:#75715e&#34;&gt;// Si specifica la connessione come persistente (Opzionale)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Send the HTTP request over the SSL connection
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;http&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;write(&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;ssl_stream, req);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;На данном этапе остается лишь получить ответ на наш запрос вместе с кодом завершения, чтобы узнать результат запроса.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Receive the HTTP response
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;beast&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;flat_buffer buffer;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;http&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;response&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;http&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;dynamic_body&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; res;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;http&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;read(&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;ssl_stream, buffer, res); &lt;span style=&#34;color:#75715e&#34;&gt;//Otteniamo la risposta e salviamola in res
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;string req_response &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; beast&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;buffers_to_string(res.body().data()); &lt;span style=&#34;color:#75715e&#34;&gt;// Convertiamo la risposta in una stringa
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (res.result_int() &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;200&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;// 200 = HTTP_OK
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;После завершения нашего запроса, нам необходимо закрыть соединение с прокси-сервером и освободить выделенную память для потока SSL:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;boost&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;system&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;error_code ec;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssl_stream&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;shutdown(ec); &lt;span style=&#34;color:#75715e&#34;&gt;// Spegniamo lo stream SSL
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;delete&lt;/span&gt; ssl_stream;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;socket.close(); &lt;span style=&#34;color:#75715e&#34;&gt;// Chiudiamo il socket
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;И вот мы успешно отправили наш запрос и получили ответ.&lt;/p&gt;
+&lt;h2 id=&#34;руководство-по-установке&#34;&gt;Руководство по установке&lt;/h2&gt;
+&lt;p&gt;Для установки &lt;strong&gt;CppOnionBridge&lt;/strong&gt; необходимо выполнить несколько предварительных шагов, включая настройку Boost и OpenSSL в вашей среде разработки, а также наличие активного экземпляра службы Tor, настроенной на работу через порт 9150.&lt;/p&gt;
+&lt;h3 id=&#34;шаги-установки&#34;&gt;Шаги установки:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Убедитесь, что Boost и OpenSSL установлены и правильно настроены в системе.&lt;/li&gt;
+&lt;li&gt;Проверьте, что служба Tor активна и настроена на подключение через порт 9150.&lt;/li&gt;
+&lt;li&gt;Клонируйте репозиторий GitHub &lt;strong&gt;CppOnionBridge&lt;/strong&gt; и включите его в свой проект.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;участвуйте-в-проекте&#34;&gt;Участвуйте в проекте&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;CppOnionBridge&lt;/strong&gt; - это проект с открытым исходным кодом, и участие сообщества необходимо для его непрерывного развития и улучшения. Если вы заинтересованы в участии, будь то через код, документацию или тестирование, посетите &lt;a href=&#34;https://github.com/dano20zombie/CppOnionBridge&#34;&gt;репозиторий GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;заключение&#34;&gt;Заключение&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;CppOnionBridge&lt;/strong&gt; представляет собой значительный шаг в направлении демократизации безопасного и анонимного доступа в Интернет. Благодаря легкой интеграции, минимальным зависимостям и совместимости с сетью Tor, он открывает новые горизонты для разработки приложений, уважающих конфиденциальность и безопасность пользователей.&lt;/p&gt;
+&lt;p&gt;Для получения дополнительных деталей, ссылок и руководств по установке обратитесь к &lt;a href=&#34;https://github.com/dano20zombie/CppOnionBridge&#34;&gt;полной документации&lt;/a&gt;, доступной в репозитории GitHub.&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

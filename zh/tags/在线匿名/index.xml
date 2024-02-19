@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>在线匿名 on dano20zombie的博客</title>
+    <link>https://dano20zombie.github.io/zh/tags/%E5%9C%A8%E7%BA%BF%E5%8C%BF%E5%90%8D/</link>
+    <description>Recent content in 在线匿名 on dano20zombie的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 17 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://dano20zombie.github.io/zh/tags/%E5%9C%A8%E7%BA%BF%E5%8C%BF%E5%90%8D/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CppOnionBridge：匿名上网的创新</title>
+      <link>https://dano20zombie.github.io/zh/posts/cpponionbridge/</link>
+      <pubDate>Sat, 17 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://dano20zombie.github.io/zh/posts/cpponionbridge/</guid>
+      <description>免责声明 本文和CppOnionBridge项目旨在促进在线隐私和安全。使用工具进行匿名浏览互联网应始终遵守当地法律法规。我们提醒您，对于此类工具的使用责任由最终用户承担。本内容按原样提供，不对其准确性或及时性提供任何形式的保证。
+简介 在当前环境中，网络隐私不断受到威胁，CppOnionBridge呈现为一种前卫的解决方案，确保用户可以匿名且安全地访问互联网。这个项目专注于Windows环境的开发，允许通过Tor网络安全地访问洋葱站点和API，利用了SOCKS5协议。
+愿景 CppOnionBridge背后的愿景很明确：提供一种工具，不仅保护用户的在线身份，还使Tor网络的强大功能对开发人员和最终用户可轻松访问，减少技术上的努力。该项目通过Tor封装SSL/TLS连接和HTTP(S)请求的复杂性，使得可以专注于应用功能。
+特点与优势 易集成性：设计为可以轻松集成到C++应用程序中，CppOnionBridge降低了开发安全应用程序的准入门槛。 最小依赖性：仅依赖于Boost进行网络和系统操作以及OpenSSL进行加密连接，使其保持轻量级且与开发环境无关。 SOCKS5兼容性：确保与Tor网络的流畅且安全的交互，为需要匿名和安全性的各种应用程序打开了大门。 什么是SOCKS5 SOCKS是一种互联网协议，通过代理服务器在客户端和服务器之间交换网络数据包。SOCKS5可选择性提供身份验证，以便只有授权用户可以访问服务器。
+为什么选择SOCKS5 选择SOCKS5协议是因为其灵活性和安全性。其客户端-服务器架构允许通过Tor封装HTTP(S)请求和SSL/TLS连接，确保与网络的安全和匿名交互。此外，其与各种应用程序的兼容性使其成为确保匿名和在线安全的理想选择。(维基百科) SOCKS5服务器充当您和最终主机之间的代理，将您计算机上的数据包发送到连接的另一侧，反之亦然。 TOR已经为我们提供了基于默认本地端口9050的SOCKS5接口，但在本示例中，我们将使用端口9150。
+工作原理 CppOnionBridge依赖于两个外部库：Boost和OpenSSL，因此让我们从项目中包含它们开始：
+#include &amp;lt;boost/asio.hpp&amp;gt; #include &amp;lt;boost/beast.hpp&amp;gt; #include &amp;lt;boost/beast/http.hpp&amp;gt; #include &amp;lt;boost/beast/ssl.hpp&amp;gt; #include &amp;lt;boost/beast/version.hpp&amp;gt; #include &amp;lt;boost/asio/connect.hpp&amp;gt; #include &amp;lt;boost/asio/ip/tcp.hpp&amp;gt; #include &amp;lt;boost/asio/ssl/error.hpp&amp;gt; #include &amp;lt;boost/asio/ssl/stream.hpp&amp;gt; #pragma comment(lib, &amp;#34;libcrypto64MD.lib&amp;#34;) #pragma comment(lib, &amp;#34;libssl64MD.lib&amp;#34;) #include &amp;lt;Windows.h&amp;gt; #include &amp;lt;iostream&amp;gt; // Definizioni di namespace per semplificare il codice namespace beast = boost::beast; namespace http = beast::http; namespace ssl = boost::asio::ssl; namespace asio = boost::asio; namespace error = boost::asio::error; using tcp = asio::ip::tcp; static std::string const host = &amp;#34;bible4u2lvhacg4b3to2e2veqpwmrc2c3tjf2wuuqiz332vlwmr4xbad.</description>
+      <content>&lt;h2 id=&#34;免责声明&#34;&gt;免责声明&lt;/h2&gt;
+&lt;p&gt;本文和CppOnionBridge项目旨在促进在线隐私和安全。使用工具进行匿名浏览互联网应始终遵守当地法律法规。我们提醒您，对于此类工具的使用责任由最终用户承担。本内容按原样提供，不对其准确性或及时性提供任何形式的保证。&lt;/p&gt;
+&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+&lt;p&gt;在当前环境中，网络隐私不断受到威胁，&lt;strong&gt;CppOnionBridge&lt;/strong&gt;呈现为一种前卫的解决方案，确保用户可以匿名且安全地访问互联网。这个项目专注于Windows环境的开发，允许通过Tor网络安全地访问洋葱站点和API，利用了SOCKS5协议。&lt;/p&gt;
+&lt;h2 id=&#34;愿景&#34;&gt;愿景&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;CppOnionBridge&lt;/strong&gt;背后的愿景很明确：提供一种工具，不仅保护用户的在线身份，还使Tor网络的强大功能对开发人员和最终用户可轻松访问，减少技术上的努力。该项目通过Tor封装SSL/TLS连接和HTTP(S)请求的复杂性，使得可以专注于应用功能。&lt;/p&gt;
+&lt;h2 id=&#34;特点与优势&#34;&gt;特点与优势&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;易集成性&lt;/strong&gt;：设计为可以轻松集成到C++应用程序中，&lt;strong&gt;CppOnionBridge&lt;/strong&gt;降低了开发安全应用程序的准入门槛。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;最小依赖性&lt;/strong&gt;：仅依赖于Boost进行网络和系统操作以及OpenSSL进行加密连接，使其保持轻量级且与开发环境无关。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SOCKS5兼容性&lt;/strong&gt;：确保与Tor网络的流畅且安全的交互，为需要匿名和安全性的各种应用程序打开了大门。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;什么是socks5&#34;&gt;什么是SOCKS5&lt;/h2&gt;
+&lt;p&gt;SOCKS是一种互联网协议，通过代理服务器在客户端和服务器之间交换网络数据包。SOCKS5可选择性提供身份验证，以便只有授权用户可以访问服务器。&lt;/p&gt;
+&lt;h2 id=&#34;为什么选择socks5&#34;&gt;为什么选择SOCKS5&lt;/h2&gt;
+&lt;p&gt;选择SOCKS5协议是因为其灵活性和安全性。其客户端-服务器架构允许通过Tor封装HTTP(S)请求和SSL/TLS连接，确保与网络的安全和匿名交互。此外，其与各种应用程序的兼容性使其成为确保匿名和在线安全的理想选择。(&lt;a href=&#34;https://en.wikipedia.org/wiki/SOCKS&#34;&gt;维基百科&lt;/a&gt;)
+SOCKS5服务器充当您和最终主机之间的代理，将您计算机上的数据包发送到连接的另一侧，反之亦然。
+TOR已经为我们提供了基于默认本地端口9050的SOCKS5接口，但在本示例中，我们将使用端口9150。&lt;/p&gt;
+&lt;h2 id=&#34;工作原理&#34;&gt;工作原理&lt;/h2&gt;
+&lt;p&gt;CppOnionBridge依赖于两个外部库：Boost和OpenSSL，因此让我们从项目中包含它们开始：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;boost/asio.hpp&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;boost/beast.hpp&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;boost/beast/http.hpp&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;boost/beast/ssl.hpp&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;boost/beast/version.hpp&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;boost/asio/connect.hpp&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;boost/asio/ip/tcp.hpp&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;boost/asio/ssl/error.hpp&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;boost/asio/ssl/stream.hpp&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#pragma comment(lib, &amp;#34;libcrypto64MD.lib&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#pragma comment(lib, &amp;#34;libssl64MD.lib&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;Windows.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Definizioni di namespace per semplificare il codice
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;namespace&lt;/span&gt; beast &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; boost&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;beast;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;namespace&lt;/span&gt; http &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; beast&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;http;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;namespace&lt;/span&gt; ssl &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; boost&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;asio&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;ssl;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;namespace&lt;/span&gt; asio &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; boost&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;asio;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;namespace&lt;/span&gt; error &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; boost&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;asio&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;error;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;using&lt;/span&gt; tcp &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; asio&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;ip&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;tcp;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;string &lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; host &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bible4u2lvhacg4b3to2e2veqpwmrc2c3tjf2wuuqiz332vlwmr4xbad.onion&amp;#34;&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;// Bible4u
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;string &lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; api &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/en/about&amp;#34;&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;// About Page
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;完成了上述步骤后，作为我们的第一个实际步骤，我们需要创建一个套接字并连接到本地主机地址，使用我们指定的端口（127.0.0.1:9150）：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;asio&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;io_context io_context;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tcp&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;socket socket(io_context);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tcp&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;resolver resolver(io_context);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssl&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;stream&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;tcp&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;socket&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;gt;*&lt;/span&gt; ssl_stream &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;nullptr&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; endpoints &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; resolver.resolve(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;127.0.0.1&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;9150&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;asio&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;connect(socket, endpoints);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;cout &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Connessione stabilita con successo.&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;连接到套接字后，首先要做的是向服务器发送初始问候，以通知我们要使用SOCKS5协议。
+有关SOCKS5的详细信息，请参考&lt;a href=&#34;https://tools.ietf.org/html/rfc1928&#34;&gt;IETF.ORG&lt;/a&gt;
+首先，您需要知道初始问候由三个连续的字节组成：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;套接字版本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;认证方法数量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;认证方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;对于第一个字节，我们有0x5，这是套接字版本（SOCKS5），对于第二个字节，我们有客户端支持的认证方法数量，在这种情况下，TOR仅接受一个，即0x1，而第三个字节指定选择的认证方法，在这种情况下将是0x0，表示无认证。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Send the SOCKS5 greeting.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;socket.send(boost&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;asio&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;buffer(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\x05\x01\x00&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;此时，我们只需读取代理返回的响应，以了解一切是否顺利，方法是读取响应的第二个字节，该字节应始终为0x0。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Receive the response to the SOCKS5 greeting.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;char&lt;/span&gt; response[&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;size_t length &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; socket.receive(boost&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;asio&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;buffer(response, &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Check the response to the SOCKS5 greeting.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (length &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; response[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;\x00&amp;#39;&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果一切顺利，我们只需告诉代理服务器为我们连接到特定主机，以便我们可以发送和接收请求。
+我们将以与初始问候相同的方式进行，但使用不同的字节。在这种情况下，我们有四个初始字节，指定的主机，以及一个或两个最终字节来指定端口（HTTP/HTTPS - 80/443）。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;套接字版本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;命令&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;保留&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;地址类型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;地址长度（仅在域类型时）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;地址&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;端口&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;作为第一个字节，我们有0x5，这是套接字版本（SOCK-5），作为第二个字节，我们有要执行的命令，在这种情况下将是0x1，表示连接，作为第三个字节，我们有一个保留字节，它必须始终为0x0，作为第四个字节，我们有我们正在指定的地址类型，在这种情况下将是0x3，表示域地址，但也可以是0x1连接到IPv4，或0x4连接到IPv6。
+在这些字节之后，需要在第五个字节中指定要连接的域的长度，并立即通过域指定主机，最后一个或两个字节是要连接到的端口，其中最常见的是80（0x50）用于HTTP，443（0x01 0xBB）用于HTTPS。
+所有可用的命令都可以在&lt;a href=&#34;https://tools.ietf.org/html/rfc1928&#34;&gt;IETF.ORG&lt;/a&gt;网站上查看和记录。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;byte&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; request &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; byte[&lt;span style=&#34;color:#ae81ff&#34;&gt;256&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;memset(request, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;sizeof&lt;/span&gt;(request));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sprintf(request, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\x05\x01\x00\x03&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%c%s&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\x01\xBB&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;static_cast&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;char&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;(host.size()), host.c_str());
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Send the request.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;socket.send(boost&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;asio&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;buffer(request, &lt;span style=&#34;color:#ae81ff&#34;&gt;7&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; host.size()));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;delete&lt;/span&gt;[] request;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;最后，我们只需要像往常一样检查服务器的响应，这种情况下应该是十个字节长，我们只会读取并专门处理第二个字节，因为它返回我们请求的状态。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Receive the response to the SOCKS5 connection request.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;char&lt;/span&gt; buffer[&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; length_response &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; socket.receive(boost&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;asio&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;buffer(buffer, &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (length_response &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; buffer[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;\x00&amp;#39;&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 0x1: General failure of the socket
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 0x2: Connection&amp;#39;s rule not allowed
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 0x3: Network not available
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 0x4: Host not available
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 0x5: Connection refused (SOCK5 not available)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 0x6: Timeout
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 0x7: Command not supported
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 0x8: Address type not supported
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;一些洋葱域名可能不接受通过SOCK5的传入连接，在这种情况下，如果您不是域名所有者，则无法做太多事情。
+然而，在这一点上，我们可以继续发送实际请求。
+如果进行了HTTPS请求，则需要通过具有相应握手的SSL流发送加密请求，否则服务器将无法解释它。
+另一方面，如果进行了HTTP请求，则应避免这种情况，因为服务器期望清晰的请求，因此不加密。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Create the SSL stream for the new connection
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;ssl&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;context ctx(ssl&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;context&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;sslv23);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssl_stream &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; ssl&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;stream&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;tcp&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;socket&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;gt;&lt;/span&gt;(socket, ctx);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Perform the SSL/TLS handshake
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;ssl_stream&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;handshake(ssl&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;stream_base&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;client);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在执行SSL流和握手后（如果对于HTTPS是必要的），我们继续发送实际请求：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Prepare the HTTP request
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;string target &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; api;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;http&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;request&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;http&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;string_body&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; req(http&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;verb&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;get, target, &lt;span style=&#34;color:#ae81ff&#34;&gt;11&lt;/span&gt;); &lt;span style=&#34;color:#75715e&#34;&gt;// Si specifica il metodo (GET/POST/PUT), l&amp;#39;host e la versione dell&amp;#39;HTTP
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;req.set(http&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;field&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;host, host); &lt;span style=&#34;color:#75715e&#34;&gt;// Si specifica l&amp;#39;host
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;req.set(http&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;field&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;user_agent, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Mozilla/5.0 (Windows NT 6.1; rv:31.0) Gecko/20100101 Firefox/31.0&amp;#34;&lt;/span&gt;); &lt;span style=&#34;color:#75715e&#34;&gt;// Si specifica l&amp;#39;User-Agent (Browser)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;req.set(http&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;field&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;connection, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;keep-alive&amp;#34;&lt;/span&gt;); &lt;span style=&#34;color:#75715e&#34;&gt;// Si specifica la connessione come persistente (Opzionale)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Send the HTTP request over the SSL connection
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;http&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;write(&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;ssl_stream, req);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;此时，我们只需最终接收我们请求的响应以及退出代码，以了解请求的结果。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Receive the HTTP response
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;beast&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;flat_buffer buffer;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;http&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;response&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;http&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;dynamic_body&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; res;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;http&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;read(&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;ssl_stream, buffer, res); &lt;span style=&#34;color:#75715e&#34;&gt;//Otteniamo la risposta e salviamola in res
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;string req_response &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; beast&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;buffers_to_string(res.body().data()); &lt;span style=&#34;color:#75715e&#34;&gt;// Convertiamo la risposta in una stringa
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (res.result_int() &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;200&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;// 200 = HTTP_OK
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;一旦我们完成了请求，我们需要关闭与代理服务器的连接并释放为SSL流分配的内存：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;boost&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;system&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;error_code ec;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssl_stream&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;shutdown(ec); &lt;span style=&#34;color:#75715e&#34;&gt;// Spegniamo lo stream SSL
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;delete&lt;/span&gt; ssl_stream;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;socket.close(); &lt;span style=&#34;color:#75715e&#34;&gt;// Chiudiamo il socket
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;我们已成功发出请求并获得了响应。&lt;/p&gt;
+&lt;h2 id=&#34;安装指南&#34;&gt;安装指南&lt;/h2&gt;
+&lt;p&gt;安装&lt;strong&gt;CppOnionBridge&lt;/strong&gt;需要一些预备步骤，包括在开发环境中配置Boost和OpenSSL，以及配置一个通过端口9150运行的Tor服务的活动实例。&lt;/p&gt;
+&lt;h3 id=&#34;安装步骤&#34;&gt;安装步骤：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;确保Boost和OpenSSL已安装并在系统中正确配置。&lt;/li&gt;
+&lt;li&gt;验证Tor服务处于活动状态并设置为通过端口9150连接。&lt;/li&gt;
+&lt;li&gt;克隆&lt;strong&gt;CppOnionBridge&lt;/strong&gt;的GitHub存储库并将其包含在您的项目中。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;为项目做贡献&#34;&gt;为项目做贡献&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;CppOnionBridge&lt;/strong&gt;是一个开源项目，社区参与对于其持续发展和改进至关重要。如果您有兴趣通过代码、文档或测试进行贡献，请访问&lt;a href=&#34;https://github.com/dano20zombie/CppOnionBridge&#34;&gt;GitHub存储库&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;结论&#34;&gt;结论&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;CppOnionBridge&lt;/strong&gt;代表了向民主化安全和匿名访问互联网迈出的重要一步。凭借其易于集成、最小依赖和与Tor网络兼容性，它为开发尊重用户隐私和安全的应用程序开辟了新的领域。&lt;/p&gt;
+&lt;p&gt;有关更多详细信息、参考资料和安装指南，请参阅GitHub存储库上提供的&lt;a href=&#34;https://github.com/dano20zombie/CppOnionBridge&#34;&gt;完整文档&lt;/a&gt;。&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

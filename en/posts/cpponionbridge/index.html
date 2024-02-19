@@ -6,7 +6,7 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Explore CppOnionBridge, the ultimate solution for navigating the Internet anonymously. This post delves into how the project offers secure and protected access to onion sites and APIs through the Tor network, highlighting the importance of privacy and online security in a digital age. Ideal for Windows users seeking to enhance their online experience while keeping a high guard on their digital identity." />
+<meta name="description" content="Explore CppOnionBridge, the ultimate solution for anonymously browsing the Internet. This post delves into how the project provides secure and protected access to onion sites and APIs through the Tor network, emphasizing the importance of privacy and online security in a digital age. Ideal for Windows users looking to enhance their online experience while keeping their digital identity safeguarded." />
 <meta name="keywords" content="" />
 
   <meta name="robots" content="noodp" />
@@ -42,7 +42,7 @@
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="CppOnionBridge: Innovation in Anonymous Internet Access">
-<meta property="og:description" content="Explore CppOnionBridge, the ultimate solution for navigating the Internet anonymously. This post delves into how the project offers secure and protected access to onion sites and APIs through the Tor network, highlighting the importance of privacy and online security in a digital age. Ideal for Windows users seeking to enhance their online experience while keeping a high guard on their digital identity." />
+<meta property="og:description" content="Explore CppOnionBridge, the ultimate solution for anonymously browsing the Internet. This post delves into how the project provides secure and protected access to onion sites and APIs through the Tor network, emphasizing the importance of privacy and online security in a digital age. Ideal for Windows users looking to enhance their online experience while keeping their digital identity safeguarded." />
 <meta property="og:url" content="https://dano20zombie.github.io/en/posts/cpponionbridge/" />
 <meta property="og:site_name" content="dano20zombie&#39;s Blog" />
 
@@ -198,7 +198,7 @@
   <h1 class="post-title">
     <a href="https://dano20zombie.github.io/en/posts/cpponionbridge/">CppOnionBridge: Innovation in Anonymous Internet Access</a>
   </h1>
-  <div class="post-meta"><time class="post-date">2024-02-17</time><span class="post-reading-time">3 min read (509 words)</span></div>
+  <div class="post-meta"><time class="post-date">2024-02-17</time><span class="post-reading-time">8 min read (1616 words)</span></div>
 
   
     <span class="post-tags">
@@ -222,49 +222,207 @@
 
   <div class="post-content"><div>
         <h2 id="disclaimer">Disclaimer<a href="#disclaimer" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p>This post and the CppOnionBridge project aim to promote online privacy and security. The use of tools for anonymous Internet browsing should always be conducted within the framework of local laws and regulations. Remember that the responsibility for using such tools lies with the end user. This content is provided &ldquo;as is,&rdquo; without any kind of warranty regarding its accuracy or timeliness.</p>
+<p>This post and the CppOnionBridge project aim to promote online privacy and security. The use of tools for anonymously browsing the Internet should always be carried out in compliance with local laws and regulations. We remind you that the responsibility for the use of such tools falls on the end user. This content is provided &ldquo;as is&rdquo;, without any kind of warranty regarding its accuracy or timeliness.</p>
 <h2 id="introduction">Introduction<a href="#introduction" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p>In the current scenario, where online privacy is constantly under threat, <strong>CppOnionBridge</strong> emerges as a leading solution to ensure anonymous and secure Internet access. This project, specially developed for Windows environments, enables safe browsing to onion sites and APIs via the Tor network, using the SOCKS5 protocol.</p>
+<p>In the current context, where online privacy is under constant threat, <strong>CppOnionBridge</strong> presents itself as an avant-garde solution to ensure anonymous and secure access to the Internet. This project, developed with a focus on Windows environments, allows for secure navigation to onion sites and APIs through the Tor network, utilizing the SOCKS5 protocol.</p>
 <h2 id="vision">Vision<a href="#vision" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p>The vision behind <strong>CppOnionBridge</strong> is clear: to provide a tool that not only protects the online identity of users but also makes the power of the Tor network accessible to developers and end-users with minimal technical effort.</p>
+<p>The vision behind <strong>CppOnionBridge</strong> is clear: to provide a tool that not only protects users&rsquo; online identity but also makes the power of the Tor network accessible to developers and end-users with minimal technical effort. This project encapsulates the complexity of SSL/TLS connections and HTTP(S) requests through Tor, allowing focus on application functionality.</p>
 <h2 id="features-and-benefits">Features and Benefits<a href="#features-and-benefits" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <ul>
-<li><strong>Ease of Integration</strong>: Designed to be easily integrated into C++ applications, <strong>CppOnionBridge</strong> lowers the entry barrier for the development of secure applications.</li>
+<li><strong>Ease of Integration</strong>: Designed to be easily integrated into C++ applications, <strong>CppOnionBridge</strong> lowers the barrier to entry for the development of secure applications.</li>
 <li><strong>Minimal Dependencies</strong>: With only dependencies on Boost for network and system operations and OpenSSL for encrypted connections, it remains lightweight and agnostic to the development environment.</li>
 <li><strong>SOCKS5 Compatibility</strong>: Ensures a smooth and secure interaction with the Tor network, opening the way for a wide range of applications that require anonymity and security.</li>
 </ul>
+<h2 id="what-is-socks5">What is SOCKS5<a href="#what-is-socks5" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>SOCKS is an Internet protocol that exchanges network packets between a client and a server through a proxy server. SOCKS5 optionally provides authentication, so that only authorized users can access a server.</p>
+<h2 id="why-socks5">Why SOCKS5<a href="#why-socks5" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>The SOCKS5 protocol was chosen for its flexibility and security. Its client-server architecture allows encapsulating HTTP(S) requests and SSL/TLS connections through Tor, ensuring a secure and anonymous interaction with the network. Moreover, its compatibility with a wide range of applications makes it an ideal choice for ensuring anonymity and online security. (<a href="https://en.wikipedia.org/wiki/SOCKS">Wikipedia</a>)
+The SOCKS5 server acts as a proxy between you and the final host, sending packets from your computer to the other side of the connection, and vice versa.
+TOR already provides us with a SOCKS5 interface, which is based on the default local port 9050, but in this example, we will use port 9150.</p>
+<h2 id="how-it-works">How It Works<a href="#how-it-works" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>CppOnionBridge relies on two external libraries: Boost and OpenSSL, so let&rsquo;s start by including them in our project:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;boost/asio.hpp&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;boost/beast.hpp&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;boost/beast/http.hpp&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;boost/beast/ssl.hpp&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;boost/beast/version.hpp&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;boost/asio/connect.hpp&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;boost/asio/ip/tcp.hpp&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;boost/asio/ssl/error.hpp&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;boost/asio/ssl/stream.hpp&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#pragma comment(lib, &#34;libcrypto64MD.lib&#34;)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#pragma comment(lib, &#34;libssl64MD.lib&#34;)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;Windows.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Definizioni di namespace per semplificare il codice
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">namespace</span> beast <span style="color:#f92672">=</span> boost<span style="color:#f92672">::</span>beast;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> http <span style="color:#f92672">=</span> beast<span style="color:#f92672">::</span>http;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> ssl <span style="color:#f92672">=</span> boost<span style="color:#f92672">::</span>asio<span style="color:#f92672">::</span>ssl;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> asio <span style="color:#f92672">=</span> boost<span style="color:#f92672">::</span>asio;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> error <span style="color:#f92672">=</span> boost<span style="color:#f92672">::</span>asio<span style="color:#f92672">::</span>error;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> tcp <span style="color:#f92672">=</span> asio<span style="color:#f92672">::</span>ip<span style="color:#f92672">::</span>tcp;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">static</span> std<span style="color:#f92672">::</span>string <span style="color:#66d9ef">const</span> host <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;bible4u2lvhacg4b3to2e2veqpwmrc2c3tjf2wuuqiz332vlwmr4xbad.onion&#34;</span>; <span style="color:#75715e">// Bible4u
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">static</span> std<span style="color:#f92672">::</span>string <span style="color:#66d9ef">const</span> api <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/en/about&#34;</span>; <span style="color:#75715e">// About Page
+</span></span></span></code></pre></div><p>Having done that, as our first actual step, we need to create a socket and connect to the localhost address, with our specified port (127.0.0.1:9150):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>asio<span style="color:#f92672">::</span>io_context io_context;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>tcp<span style="color:#f92672">::</span>socket socket(io_context);
+</span></span><span style="display:flex;"><span>tcp<span style="color:#f92672">::</span>resolver resolver(io_context);
+</span></span><span style="display:flex;"><span>ssl<span style="color:#f92672">::</span>stream<span style="color:#f92672">&lt;</span>tcp<span style="color:#f92672">::</span>socket<span style="color:#f92672">&amp;&gt;*</span> ssl_stream <span style="color:#f92672">=</span> <span style="color:#66d9ef">nullptr</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">auto</span> endpoints <span style="color:#f92672">=</span> resolver.resolve(<span style="color:#e6db74">&#34;127.0.0.1&#34;</span>, <span style="color:#e6db74">&#34;9150&#34;</span>);
+</span></span><span style="display:flex;"><span>asio<span style="color:#f92672">::</span>connect(socket, endpoints);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Connessione stabilita con successo.&#34;</span> <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+</span></span></code></pre></div><p>Once connected to the socket, the first thing to do is to send the initial greeting to the server, to communicate that we want to use the SOCKS5 protocol.
+For detailed information about SOCKS5, you can refer to <a href="https://tools.ietf.org/html/rfc1928">IETF.ORG</a>
+Primarily, you need to know that the initial greeting consists of three single bytes in sequence:</p>
+<ol>
+<li>
+<ul>
+<li>SOCKET VERSION</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>NUMBER OF AUTHENTICATION METHODS</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>AUTHENTICATION METHODS</li>
+</ul>
+</li>
+</ol>
+<p>For the first byte, we have 0x5, which is the socket version (SOCKS5), as the second byte, we have the number of authentication methods supported by the client, where in this case TOR accepts only one, which is 0x1, while the third byte specifies the chosen authentication method, which in this case will be 0x0, meaning no authentication.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// Send the SOCKS5 greeting.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>socket.send(boost<span style="color:#f92672">::</span>asio<span style="color:#f92672">::</span>buffer(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\x05\x01\x00</span><span style="color:#e6db74">&#34;</span>, <span style="color:#ae81ff">3</span>));
+</span></span></code></pre></div><p>At this point, we just need to read the response returned by the proxy to know if everything went well or not, by reading the second byte of the response, which should always be 0x0.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// Receive the response to the SOCKS5 greeting.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">char</span> response[<span style="color:#ae81ff">2</span>];
+</span></span><span style="display:flex;"><span>size_t length <span style="color:#f92672">=</span> socket.receive(boost<span style="color:#f92672">::</span>asio<span style="color:#f92672">::</span>buffer(response, <span style="color:#ae81ff">2</span>));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Check the response to the SOCKS5 greeting.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (length <span style="color:#f92672">!=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">||</span> response[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;\x00&#39;</span>) <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+</span></span></code></pre></div><p>If everything went well, all we have left is to tell the proxy server to connect to a specific host for us, so we can send and receive requests.
+We will proceed in the same way as the initial greeting but with different bytes. In this case, we have four initial bytes, the specified host, and one or two final bytes to specify the port (HTTP/HTTPS - 80/443).</p>
+<ol>
+<li>
+<ul>
+<li>SOCKET VERSION</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>COMMAND</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>RESERVED</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>ADDRESS TYPE</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>ADDRESS LENGTH (ONLY IF DOMAIN TYPE)</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>ADDRESS</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>PORT</li>
+</ul>
+</li>
+</ol>
+<p>As the first byte, we have 0x5, which is the socket version (SOCK-5), as the second byte, we have the command we want to execute, where in this case it will be 0x1, meaning connection, as the third byte we have a reserved byte, which must always be 0x0, and as the fourth byte we have the type of address we are specifying, where in this case it will be 0x3, meaning a domain address, but it could also be 0x1 to connect to an IPv4, or 0x4 to connect to an IPv6.
+After these bytes, it is necessary to specify the length of the domain to connect to, at the fifth byte, and immediately after specify the host via domain, and as the last one or two bytes we have the port to connect to, where the most common ones are 80 (0x50) for HTTP, and 443 (0x01 0xBB) for HTTPS.
+All available commands are visible and documented on the <a href="https://tools.ietf.org/html/rfc1928">IETF.ORG</a> website.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>byte<span style="color:#f92672">*</span> request <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> byte[<span style="color:#ae81ff">256</span>];
+</span></span><span style="display:flex;"><span>memset(request, <span style="color:#ae81ff">0</span>, <span style="color:#66d9ef">sizeof</span>(request));
+</span></span><span style="display:flex;"><span>sprintf(request, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\x05\x01\x00\x03</span><span style="color:#e6db74">%c%s</span><span style="color:#ae81ff">\x01\xBB</span><span style="color:#e6db74">&#34;</span>, <span style="color:#66d9ef">static_cast</span><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">char</span><span style="color:#f92672">&gt;</span>(host.size()), host.c_str());
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Send the request.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>socket.send(boost<span style="color:#f92672">::</span>asio<span style="color:#f92672">::</span>buffer(request, <span style="color:#ae81ff">7</span> <span style="color:#f92672">+</span> host.size()));
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">delete</span>[] request;
+</span></span></code></pre></div><p>Finally, we just need to check as always the server response, where in this case it should be ten bytes long, of which we will read only and exclusively the second one, as it returns the status of our request.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// Receive the response to the SOCKS5 connection request.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">char</span> buffer[<span style="color:#ae81ff">10</span>];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> length_response <span style="color:#f92672">=</span> socket.receive(boost<span style="color:#f92672">::</span>asio<span style="color:#f92672">::</span>buffer(buffer, <span style="color:#ae81ff">10</span>));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (length_response <span style="color:#f92672">!=</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">||</span> buffer[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;\x00&#39;</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 0x1: General failure of the socket
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// 0x2: Connection&#39;s rule not allowed
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// 0x3: Network not available
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// 0x4: Host not available
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// 0x5: Connection refused (SOCK5 not available)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// 0x6: Timeout
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// 0x7: Command not supported
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// 0x8: Address type not supported
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Some onion domains may not accept incoming connections via SOCK5, in this case, if you are not the domain owner, there is not much that can be done about it.
+However, at this point, we can proceed with sending the actual request.
+If an HTTPS request is made, it is necessary to send the encrypted request, through an SSL stream with the respective handshake, otherwise the server will not be able to interpret it.
+On the other hand, this should be avoided if an HTTP request is made, where in this case the server expects a clear request, therefore not encrypted.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// Create the SSL stream for the new connection
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>ssl<span style="color:#f92672">::</span>context ctx(ssl<span style="color:#f92672">::</span>context<span style="color:#f92672">::</span>sslv23);
+</span></span><span style="display:flex;"><span>ssl_stream <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ssl<span style="color:#f92672">::</span>stream<span style="color:#f92672">&lt;</span>tcp<span style="color:#f92672">::</span>socket<span style="color:#f92672">&amp;&gt;</span>(socket, ctx);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Perform the SSL/TLS handshake
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>ssl_stream<span style="color:#f92672">-&gt;</span>handshake(ssl<span style="color:#f92672">::</span>stream_base<span style="color:#f92672">::</span>client);
+</span></span></code></pre></div><p>After performing an SSL stream and its handshake (IF NECESSARY FOR HTTPS), we proceed with sending the actual request:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// Prepare the HTTP request
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>std<span style="color:#f92672">::</span>string target <span style="color:#f92672">=</span> api;
+</span></span><span style="display:flex;"><span>http<span style="color:#f92672">::</span>request<span style="color:#f92672">&lt;</span>http<span style="color:#f92672">::</span>string_body<span style="color:#f92672">&gt;</span> req(http<span style="color:#f92672">::</span>verb<span style="color:#f92672">::</span>get, target, <span style="color:#ae81ff">11</span>); <span style="color:#75715e">// Si specifica il metodo (GET/POST/PUT), l&#39;host e la versione dell&#39;HTTP
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>req.set(http<span style="color:#f92672">::</span>field<span style="color:#f92672">::</span>host, host); <span style="color:#75715e">// Si specifica l&#39;host
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>req.set(http<span style="color:#f92672">::</span>field<span style="color:#f92672">::</span>user_agent, <span style="color:#e6db74">&#34;Mozilla/5.0 (Windows NT 6.1; rv:31.0) Gecko/20100101 Firefox/31.0&#34;</span>); <span style="color:#75715e">// Si specifica l&#39;User-Agent (Browser)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>req.set(http<span style="color:#f92672">::</span>field<span style="color:#f92672">::</span>connection, <span style="color:#e6db74">&#34;keep-alive&#34;</span>); <span style="color:#75715e">// Si specifica la connessione come persistente (Opzionale)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Send the HTTP request over the SSL connection
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>http<span style="color:#f92672">::</span>write(<span style="color:#f92672">*</span>ssl_stream, req);
+</span></span></code></pre></div><p>At this point, all that remains is to finally receive the response to our request along with the exit code to know the outcome of the request.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// Receive the HTTP response
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>beast<span style="color:#f92672">::</span>flat_buffer buffer;
+</span></span><span style="display:flex;"><span>http<span style="color:#f92672">::</span>response<span style="color:#f92672">&lt;</span>http<span style="color:#f92672">::</span>dynamic_body<span style="color:#f92672">&gt;</span> res;
+</span></span><span style="display:flex;"><span>http<span style="color:#f92672">::</span>read(<span style="color:#f92672">*</span>ssl_stream, buffer, res); <span style="color:#75715e">//Otteniamo la risposta e salviamola in res
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>std<span style="color:#f92672">::</span>string req_response <span style="color:#f92672">=</span> beast<span style="color:#f92672">::</span>buffers_to_string(res.body().data()); <span style="color:#75715e">// Convertiamo la risposta in una stringa
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (res.result_int() <span style="color:#f92672">!=</span> <span style="color:#ae81ff">200</span>) <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>; <span style="color:#75715e">// 200 = HTTP_OK
+</span></span></span></code></pre></div><p>Once we have finished with our request, we need to close the connection with the proxy server and free the memory allocated for the SSL stream:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>boost<span style="color:#f92672">::</span>system<span style="color:#f92672">::</span>error_code ec;
+</span></span><span style="display:flex;"><span>ssl_stream<span style="color:#f92672">-&gt;</span>shutdown(ec); <span style="color:#75715e">// Spegniamo lo stream SSL
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">delete</span> ssl_stream;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>socket.close(); <span style="color:#75715e">// Chiudiamo il socket
+</span></span></span></code></pre></div><p>And here we have successfully made our request and obtained the response.</p>
 <h2 id="installation-guide">Installation Guide<a href="#installation-guide" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p>The installation of <strong>CppOnionBridge</strong> requires a few preliminary steps, including setting up Boost and OpenSSL in your development environment, as well as having an active Tor service instance configured to operate through port 9150.</p>
+<p>Installing <strong>CppOnionBridge</strong> requires some preliminary steps, including configuring Boost and OpenSSL in your development environment, as well as having an active instance of the Tor service configured to operate through port 9150.</p>
 <h3 id="installation-steps">Installation Steps:<a href="#installation-steps" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <ol>
-<li>Ensure that Boost and OpenSSL are installed and properly configured in your system.</li>
+<li>Ensure that Boost and OpenSSL are installed and properly configured in the system.</li>
 <li>Verify that the Tor service is active and set to connect through port 9150.</li>
-<li>Clone the <strong>CppOnionBridge</strong> GitHub repository and include it in your project.</li>
+<li>Clone the GitHub repository of <strong>CppOnionBridge</strong> and include it in your project.</li>
 </ol>
-<h2 id="implementation-examples">Implementation Examples<a href="#implementation-examples" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p>Using <strong>CppOnionBridge</strong> is intuitive for anyone with a basic understanding of C++. Below is an implementation example for a GET request:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// Example code for a GET request using CppOnionBridge
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">static</span> std<span style="color:#f92672">::</span>string <span style="color:#66d9ef">const</span> host <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;bible4u2lvhacg4b3to2e2veqpwmrc2c3tjf2wuuqiz332vlwmr4xbad.onion&#34;</span>; <span style="color:#75715e">// Bible4u
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">static</span> std<span style="color:#f92672">::</span>string <span style="color:#66d9ef">const</span> api1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/en/about&#34;</span>; <span style="color:#75715e">// About Page
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">static</span> std<span style="color:#f92672">::</span>string <span style="color:#66d9ef">const</span> api2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/en/links&#34;</span>; <span style="color:#75715e">// Links Page
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
-</span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>string response;
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Connecting to &#34;</span> <span style="color:#f92672">&lt;&lt;</span> host <span style="color:#f92672">+</span> api1 <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;...&#34;</span> <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
-</span></span><span style="display:flex;"><span>    connection.make_get(host, api1, std<span style="color:#f92672">::</span>string(), response);
-</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> response <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
-</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Connecting to &#34;</span> <span style="color:#f92672">&lt;&lt;</span> host <span style="color:#f92672">+</span> api2 <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;...&#34;</span> <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
-</span></span><span style="display:flex;"><span>    connection.make_get(host, api2, std<span style="color:#f92672">::</span>string(), response);
-</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> response <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
-</span></span><span style="display:flex;"><span>    system(<span style="color:#e6db74">&#34;pause&#34;</span>);
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="contributing-to-the-project">Contributing to the Project<a href="#contributing-to-the-project" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p><strong>CppOnionBridge</strong> is an open-source project, and community participation is essential for its ongoing development and improvement. If you are interested in contributing, whether through coding, documentation, or testing, visit the <a href="https://github.com/dano20zombie/CppOnionBridge">GitHub repository</a>.</p>
+<h2 id="contribute-to-the-project">Contribute to the Project<a href="#contribute-to-the-project" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p><strong>CppOnionBridge</strong> is an open-source project, and community participation is essential for its continuous development and improvement. If you are interested in contributing, whether through code, documentation, or testing, visit the <a href="https://github.com/dano20zombie/CppOnionBridge">GitHub repository</a>.</p>
 <h2 id="conclusion">Conclusion<a href="#conclusion" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p><strong>CppOnionBridge</strong> represents a significant step towards the democratization of secure and anonymous Internet access. With its ease of integration, minimal dependencies, and compatibility with the Tor network, it opens new frontiers for the development of applications that respect the privacy and security of users.</p>
-<p>For more details, references, and installation guides, check out the <a href="https://github.com/dano20zombie/CppOnionBridge">complete documentation</a> available on the GitHub repository.</p>
+<p><strong>CppOnionBridge</strong> represents a significant step towards democratizing secure and anonymous access to the Internet. With its ease of integration, minimal dependencies, and compatibility with the Tor network, it opens up new frontiers for developing applications that respect users&rsquo; privacy and security.</p>
+<p>For more details, references, and installation guides, refer to the <a href="https://github.com/dano20zombie/CppOnionBridge">complete documentation</a> available on the GitHub repository.</p>
 
       </div></div>
 
