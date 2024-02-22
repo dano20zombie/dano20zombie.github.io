@@ -198,7 +198,7 @@
   <h1 class="post-title">
     <a href="https://dano20zombie.github.io/it/posts/cpponionbridge/">CppOnionBridge: Innovazione nell&rsquo;Accesso Anonimo a Internet</a>
   </h1>
-  <div class="post-meta"><time class="post-date">2024-02-17</time><span class="post-reading-time">8 min read (1621 words)</span></div>
+  <div class="post-meta"><time class="post-date">2024-02-17</time><span class="post-reading-time">8 min read (1622 words)</span></div>
 
   
     <span class="post-tags">
@@ -376,9 +376,9 @@ Tutti i comandi disponibili sono visibili e documentati sul sito <a href="https:
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Alcuni domini onion potrebbero non accettare connessioni in entrata tramite SOCK5, in questo caso, se non si è il proprietario del dominio, non c&rsquo;è molto che si possa fare a riguardo.
-Ad ogni modo, arrivati a questo punto, possaìiamo proseguire con l&rsquo;invio della richiesta vera e propria.
+Ad ogni modo, arrivati a questo punto, possiamo proseguire con l&rsquo;invio della richiesta vera e propria.
 Se si effettua una richiesta HTTPS, è necessario inviare la richiesta encriptata, tramite uno stream SSL con relativo handshake, altrimenti il server non sarà in grado di interpretarla.
-Ciò è da evitare invece se si effettua una richiesta HTTP, dove in questo caso il server si aspetta una richiesta in chiara, quindi non encriptata.</p>
+Ciò è da evitare invece se si effettua una richiesta HTTP, dove in questo caso il server si aspetta una richiesta in chiaro, quindi non encriptata.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// Create the SSL stream for the new connection
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>ssl<span style="color:#f92672">::</span>context ctx(ssl<span style="color:#f92672">::</span>context<span style="color:#f92672">::</span>sslv23);
 </span></span><span style="display:flex;"><span>ssl_stream <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ssl<span style="color:#f92672">::</span>stream<span style="color:#f92672">&lt;</span>tcp<span style="color:#f92672">::</span>socket<span style="color:#f92672">&amp;&gt;</span>(socket, ctx);
@@ -404,7 +404,7 @@ Ciò è da evitare invece se si effettua una richiesta HTTP, dove in questo caso
 </span></span><span style="display:flex;"><span>std<span style="color:#f92672">::</span>string req_response <span style="color:#f92672">=</span> beast<span style="color:#f92672">::</span>buffers_to_string(res.body().data()); <span style="color:#75715e">// Convertiamo la risposta in una stringa
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (res.result_int() <span style="color:#f92672">!=</span> <span style="color:#ae81ff">200</span>) <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>; <span style="color:#75715e">// 200 = HTTP_OK
-</span></span></span></code></pre></div><p>Una volta finito con la nostra richiesta, dobbiamochiudere la connessione con il server proxy, e liberare la memoria allocata per lo stream SSL:</p>
+</span></span></span></code></pre></div><p>Una volta finito con la nostra richiesta, dobbiamo chiudere la connessione con il server proxy, e liberare la memoria allocata per lo stream SSL:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>boost<span style="color:#f92672">::</span>system<span style="color:#f92672">::</span>error_code ec;
 </span></span><span style="display:flex;"><span>ssl_stream<span style="color:#f92672">-&gt;</span>shutdown(ec); <span style="color:#75715e">// Spegniamo lo stream SSL
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">delete</span> ssl_stream;
